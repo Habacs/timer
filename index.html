@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <title>Időzítő Alkalmazás</title>
+</head>
+<body>
+    <header>
+        <h1 class="text-center">Időzítő hozzáadása</h1>
+    </header>
+  <main class="container mt-4 " id="app">
+    <section class="text-center"></section>
+    <h2>Új időzítő hozzáadása</h2>
+    <div class="d-flex justify-contet-center"></div>
+    <form class="w-25" @submit.prvent>
+        <div class="input-group mb-3">
+            <div class="input-group">
+                <label class="input-group-text">Időzítő neve</label>
+                <input type="text" v-model="newTimerName" class="form-control">
+            </div>
+            <div class="input-group">
+                <label class="input-group-text">Perc</label>
+                <input type="number" v-model.number="newTimerMinutes" class="form-control">
+            </div>
+            <div class="input-group">
+                <label class="input-group-text">Másodperc</label>
+                <input type="number" v-model.number="newTimerSeconds" class="form-control">
+            </div>
+            <div class="input-group">
+                <label class="input-group-text">Hozzáadás</label>
+                <button class="btn btn-primary mt-2" @click="addTimer"></button>
+            </div>
+        </div>
+    </form>
+
+
+  </main>
+</body>
+</html>
